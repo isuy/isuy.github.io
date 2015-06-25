@@ -2,9 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <title>isuy</title>
+  <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+  <script type="text/javascript" src="./static/min.slip.js"></script>
+  <style type="text/css">
+      body{
+        background-color: yellow;
+        margin: 0;
+        padding: 0;
+      }
+
+      .content {
+        background-color: yellow;
+        height: 100%;
+        width: 100%;
+        display: box;
+        display: -webkit-box;
+        display: -moz-box;
+        -webkit-box-pack: center;
+        -moz-box-pack: center;
+        -webkit-box-align: center;
+        -moz-box-align: center;
+      }
+
+      .title {
+        text-align: center;
+        font-size: 1000%;
+        width: 100%;
+        height: 200px;
+      }
+  </style>
 </head>
 <body>
-  <h1>Hello, world!</h1>
+    <div id="container">
+      <div class="page page-1">
+        <div class="content">
+          <div class="title">
+            Page 1
+          </div>
+        </div>
+      </div>
+
+      <div class="page page-2">
+        <div class="content">
+          <div class="title">
+            Page 2
+          </div>
+        </div>
+      </div>
+
+      <div class="page page-3">
+        <div class="content">
+          <div class="title">
+            Page 3
+          </div>
+        </div>
+      </div>
+
+      <div class="page page-4">
+        <div class="content">
+          <div class="title">
+            Page 4
+          </div>
+        </div>
+      </div>
+    </div>
 </body>
+<script type="text/javascript">
+  var container = document.getElementById('container');
+  var pages = document.querySelectorAll('.page');
+  var slip = Slip(container, 'y').webapp(pages);
+</script>
 </html>
