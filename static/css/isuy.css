@@ -23,3 +23,7 @@ html {
   width: 100%;
   overflow: hidden;
 }
+
+#elapsed-time {
+  font-size: 80%;
+}

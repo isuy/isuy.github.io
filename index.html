@@ -10,41 +10,36 @@
   <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
   <link href="./static/css/isuy.css" type="text/css" rel="stylesheet" />
   <script type="text/javascript" src="./static/js/min.slip.js"></script>
+  <script type="text/javascript" src="./static/js/jquery-2.1.4.min.js"></script>
   <script type="text/javascript" src="./static/js/isuy.js"></script>
 </head>
 <body>
     <div id="container">
       <div class="page page-1">
         <div class="content">
-          <div class="title">
-            <audio autoplay="autoplay" controls="controls">
-              <source src="./static/audio/2014-11-30.mp3" />
-            </audio>
-          </div>
+          <p id='elapsed-time'></p>
         </div>
       </div>
 
       <div class="page page-2">
         <div class="content">
-          <div class="title">
-            Page 2
-          </div>
+          <audio class='audio' id='page-2-audio' preload controls>
+            <source src="./static/audio/I could be the one.mp3" />
+          </audio>
         </div>
       </div>
 
       <div class="page page-3">
         <div class="content">
-          <div class="title">
-            Page 3
-          </div>
+          Page 3
         </div>
       </div>
 
       <div class="page page-4">
         <div class="content">
-          <div class="title">
-            Page 4
-          </div>
+          <audio class='audio' id='page-4-audio' preload controls>
+            <source src="./static/audio/我的赖皮女友.mp3" />
+          </audio>
         </div>
       </div>
     </div>
