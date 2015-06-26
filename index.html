@@ -8,34 +8,9 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <title>isuy</title>
   <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
-  <script type="text/javascript" src="./static/min.slip.js"></script>
-  <style type="text/css">
-      body{
-        background-color: yellow;
-        margin: 0;
-        padding: 0;
-      }
-
-      .content {
-        background-color: yellow;
-        height: 100%;
-        width: 100%;
-        display: box;
-        display: -webkit-box;
-        display: -moz-box;
-        -webkit-box-pack: center;
-        -moz-box-pack: center;
-        -webkit-box-align: center;
-        -moz-box-align: center;
-      }
-
-      .title {
-        text-align: center;
-        font-size: 300%;
-        width: 100%;
-        overflow: hidden;
-      }
-  </style>
+  <link href="./static/css/isuy.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="./static/js/min.slip.js"></script>
+  <script type="text/javascript" src="./static/js/isuy.js"></script>
 </head>
 <body>
     <div id="container">
@@ -72,9 +47,4 @@
       </div>
     </div>
 </body>
-<script type="text/javascript">
-  var container = document.getElementById('container');
-  var pages = document.querySelectorAll('.page');
-  var slip = Slip(container, 'y').webapp(pages);
-</script>
 </html>

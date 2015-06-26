@@ -1,0 +1,25 @@
+html {
+  background: url('/static/img/letter-paper.jpg');
+  background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+}
+
+.page {
+  height: 100%;
+  width: 100%;
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+}
+
+.content {
+  text-align: center;
+  font-size: 300%;
+  width: 100%;
+  overflow: hidden;
+}
