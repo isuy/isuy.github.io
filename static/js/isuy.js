@@ -8,7 +8,7 @@ var stopAllAudio = function(excludedID) {
 
 var playAudio = function(id) {
   var audio = $('#' + id);
-  cover = audio.parent('.audio-container').find('.cover');
+  var cover = audio.parent('.audio-container').find('.cover');
 
   if (audio.prop('paused'))
     audio.trigger('play');
@@ -16,18 +16,24 @@ var playAudio = function(id) {
     cover.addClass('animate');
 }
 
+var pauseAudio = function(id) {
+  var audio = $('#' + id);
+  var cover = audio.parent('.audio-container').find('.cover');
+
+  if (!audio.prop('paused'))
+    audio.trigger('pause');
+  if (cover.hasClass('animate'))
+    cover.removeClass('animate');
+}
+
 var playOrPauseAudio = function(cover) {
   var audio = cover.parent('.audio-container').find('audio');
+  var id = audio.attr('id');
 
-  if (audio.prop('paused')) {
-    audio.trigger('play');
-    if (!cover.hasClass('animate'))
-      cover.addClass('animate');
-  } else {
-    audio.trigger('pause');
-    if (cover.hasClass('animate'))
-      cover.removeClass('animate');
-  }
+  if (audio.prop('paused'))
+    playAudio(id);
+  else
+    pauseAudio(id);
 }
 
 var updateElapsedTime = function() {
@@ -62,6 +68,9 @@ $(document).ready(function() {
   $('.audio').each(function() {
     this.addEventListener('ended', function() {
       this.load();
+      var cover = $(this).parent('.audio-container').find('.cover');
+      if (cover.hasClass('animate'))
+        cover.removeClass('animate');
     });
   })
 })
