@@ -61,7 +61,7 @@ $(document).ready(function() {
 
   $('.audio').each(function() {
     this.addEventListener('ended', function() {
-      this.currentTime = 0;
+      this.load();
     });
   })
 })
