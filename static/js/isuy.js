@@ -10,16 +10,16 @@ var playAudio = function(id) {
   var audio = $('#' + id);
   cover = audio.parent('.audio-container').find('.cover');
 
-  audio.trigger('play');
+  if (audio.prop('paused'))
+    audio.trigger('play');
   if (!cover.hasClass('animate'))
     cover.addClass('animate');
 }
 
 var playOrPauseAudio = function(cover) {
   var audio = cover.parent('.audio-container').find('audio');
-  var paused = audio.prop('paused');
 
-  if (paused) {
+  if (audio.prop('paused')) {
     audio.trigger('play');
     if (!cover.hasClass('animate'))
       cover.addClass('animate');
@@ -58,4 +58,10 @@ $(document).ready(function() {
   $('.cover').click(function() {
     playOrPauseAudio($(this));
   });
+
+  $('.audio').each(function() {
+    this.addEventListener('ended', function() {
+      this.currentTime = 0;
+    });
+  })
 })
