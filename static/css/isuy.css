@@ -27,3 +27,29 @@ html {
 #elapsed-time {
   font-size: 80%;
 }
+
+.cover:hover {
+  cursor: pointer;
+}
+
+.cover {
+  width: 25%;
+  margin: auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+@keyframes spinning {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+@-webkit-keyframes spinning {
+  from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(360deg);}
+}
+
+.cover.animate {
+  animation: spinning 10s infinite linear;
+  -webkit-animation: spinning 10s infinite linear;
+}
