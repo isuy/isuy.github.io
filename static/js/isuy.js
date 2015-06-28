@@ -49,11 +49,11 @@ $(document).ready(function() {
       return;
 
     if (this.page == 1) {
-      id = 'page-2-audio';
+      id = 'page-1-audio';
       stopAllAudio(id);
       playAudio(id);
     } else if (this.page == 3) {
-      id = 'page-4-audio';
+      id = 'page-3-audio';
       stopAllAudio(id);
       playAudio(id);
     }

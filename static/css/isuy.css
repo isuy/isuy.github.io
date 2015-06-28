@@ -19,9 +19,22 @@ html {
 
 .content {
   text-align: center;
-  font-size: 300%;
-  width: 100%;
+  font-size: 6.5vw;
+  width: 70%;
+  max-height: 85%;
   overflow: hidden;
+}
+
+.title {
+  width: 100%;
+  font-weight: bold;
+}
+
+.answer {
+  text-align: left;
+  width: 100%;
+  font-size: 5vw;
+  margin-top: 3.5vw;
 }
 
 #elapsed-time {
@@ -33,7 +46,7 @@ html {
 }
 
 .cover {
-  width: 25%;
+  width: 15vw;
   margin: auto;
   border-radius: 50%;
   overflow: hidden;
