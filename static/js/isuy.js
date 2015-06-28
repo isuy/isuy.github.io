@@ -37,8 +37,23 @@ var playOrPauseAudio = function(cover) {
 }
 
 var updateElapsedTime = function() {
-  var date = new Date();
-  $('#elapsed-time').text(date.toLocaleString());
+  var beginDate = new Date(2014, 9, 30, 23, 39);
+  var currentDate = new Date();
+  var delta = currentDate.getTime() - beginDate.getTime();
+
+  var days = Math.floor(delta / 86400000);
+  delta -= days * 86400000;
+
+  var hours = Math.floor(delta / 3600000);
+  delta -= hours * 3600000;
+
+  var minutes = Math.floor(delta / 60000);
+  delta -= minutes * 60000;
+
+  var seconds = Math.floor(delta / 1000);
+
+  var elapsedTime = days + '天' + hours + '时' + minutes + '分' + seconds + '秒';
+  $('#elapsed-time').text(elapsedTime);
 }
 
 $(document).ready(function() {
