@@ -25,6 +25,17 @@ html {
   overflow: hidden;
 }
 
+#canvas-content {
+  text-align: center;
+  font-size: 6.5vw;
+  max-height: 85%;
+  overflow: hidden;
+}
+
+#canvas-container {
+  /*background: yellow;*/
+}
+
 .title {
   width: 100%;
   font-weight: bold;
