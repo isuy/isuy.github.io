@@ -1,11 +1,3 @@
-var stopAllAudio = function(excludedID) {
-  $('.audio').each(function() {
-    var currentID = this.getAttribute('id');
-    if (currentID != excludedID && !this.paused)
-      this.pause();
-  })
-}
-
 var playAudio = function(id) {
   var audio = $('#' + id);
   var cover = audio.parent('.audio-container').find('.cover');
@@ -34,6 +26,14 @@ var playOrPauseAudio = function(cover) {
     playAudio(id);
   else
     pauseAudio(id);
+}
+
+var stopAllAudio = function(excludedID) {
+  $('.audio').each(function() {
+    var currentID = this.getAttribute('id');
+    if (currentID != excludedID && !this.paused)
+      pauseAudio(currentID);
+  })
 }
 
 var updateElapsedTime = function() {
@@ -122,12 +122,8 @@ $(document).ready(function() {
     if (this.orient.toString() == '')
       return;
 
-    if (this.page == 1) {
-      id = 'page-1-audio';
-      stopAllAudio(id);
-      playAudio(id);
-    } else if (this.page == 3) {
-      id = 'page-3-audio';
+    if (this.page == 3) {
+      id = 'audio-1';
       stopAllAudio(id);
       playAudio(id);
     }

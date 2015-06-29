@@ -17,40 +17,53 @@ html {
   -moz-box-align: center;
 }
 
-.content {
+.content, #canvas-content{
   text-align: center;
-  font-size: 6.5vw;
-  width: 70%;
-  max-height: 85%;
+  /*max-height: 85%;*/
   overflow: hidden;
+}
+
+.content {
+  width: 70%;
 }
 
 #canvas-content {
-  text-align: center;
   font-size: 6.5vw;
-  max-height: 85%;
-  overflow: hidden;
 }
 
-#canvas-container {
-  /*background: yellow;*/
+#canvas-content p {
+  margin: 0px 0px 2vw 0px;
+  color: #E93D6D;
 }
 
 .title {
   width: 100%;
+  color: #E93D6D;
   font-weight: bold;
+  font-size: 6.5vw;
 }
 
 .answer {
   text-align: left;
   width: 100%;
-  font-size: 5vw;
-  margin-top: 3.5vw;
+  font-size: 3vh;
+  margin-top: 2vh;
 }
 
-#canvas-content p {
-  margin: 0px 0px 3.5vw 0px;
-  color: #E93D6D;
+.answer p {
+  margin: 0px 0px 2vh 0px;
+}
+
+#first-meet {
+  text-align: center;
+}
+
+#first-meet img {
+  height: 20vh;
+}
+
+.audio-container {
+  text-align: center;
 }
 
 .cover:hover {
@@ -58,7 +71,7 @@ html {
 }
 
 .cover {
-  width: 15vw;
+  width: 10vh;
   margin: auto;
   border-radius: 50%;
   overflow: hidden;
