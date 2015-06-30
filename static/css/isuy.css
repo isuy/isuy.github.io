@@ -54,12 +54,16 @@ html {
   margin: 0px 0px 2vh 0px;
 }
 
-#first-meet {
+#first-meet, #morning-call {
   text-align: center;
 }
 
 #first-meet img {
   height: 20vh;
+}
+
+#morning-call img {
+  height: 85vw;
 }
 
 .audio-container {

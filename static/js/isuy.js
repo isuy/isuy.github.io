@@ -122,8 +122,14 @@ $(document).ready(function() {
     if (this.orient.toString() == '')
       return;
 
+    var id = null;
     if (this.page == 3) {
       id = 'audio-1';
+    } else if (this.page == 11) {
+      id = 'audio-2';
+    }
+
+    if (id != null) {
       stopAllAudio(id);
       playAudio(id);
     }
