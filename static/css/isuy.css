@@ -45,13 +45,16 @@ html {
 
 .answer {
   text-align: left;
-  width: 100%;
   font-size: 3vh;
   margin-top: 2vh;
 }
 
 .answer p {
   margin: 0px 0px 2vh 0px;
+}
+
+.answer ol p {
+  color: #E93D6D;
 }
 
 #first-meet, #morning-call {
@@ -63,7 +66,7 @@ html {
 }
 
 #morning-call img {
-  height: 85vw;
+  height: 60vh;
 }
 
 .audio-container {
