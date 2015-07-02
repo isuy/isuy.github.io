@@ -17,6 +17,17 @@ html {
   -moz-box-align: center;
 }
 
+.pink {
+  color: #E93D6D;
+}
+
+#ending {
+  text-align: right;
+  font-weight: bold;
+  font-size: 3.5vh;
+  color: #E93D6D;
+}
+
 .content, #canvas-content{
   text-align: center;
   /*max-height: 85%;*/

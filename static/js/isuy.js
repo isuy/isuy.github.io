@@ -129,6 +129,8 @@ $(document).ready(function() {
       id = 'audio-2';
     } else if (this.page == 18) {
       id = 'audio-3';
+    } else if (this.page == 25) {
+      id = 'audio-4';
     }
 
     if (id != null) {
