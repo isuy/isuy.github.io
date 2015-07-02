@@ -127,10 +127,12 @@ $(document).ready(function() {
       id = 'audio-1';
     } else if (this.page == 11) {
       id = 'audio-2';
-    } else if (this.page == 18) {
+    } else if (this.page == 17) {
       id = 'audio-3';
-    } else if (this.page == 25) {
+    } else if (this.page == 18) {
       id = 'audio-4';
+    } else if (this.page == 25) {
+      id = 'audio-5';
     }
 
     if (id != null) {
