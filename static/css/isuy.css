@@ -39,11 +39,11 @@ html {
 }
 
 #canvas-content {
-  font-size: 6.5vw;
+  font-size: 4.5vh;
 }
 
 #canvas-content p {
-  margin: 0px 0px 2vw 0px;
+  margin: 0px 0px 1vh 0px;
   color: #E93D6D;
 }
 
@@ -81,7 +81,7 @@ html {
 }
 
 #moving-4-12 img {
-  width: 50vw;
+  width: 35vh;
 }
 
 #moving-6-1 img {
