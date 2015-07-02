@@ -18,22 +18,24 @@ var pauseAudio = function(id) {
     cover.removeClass('animate');
 }
 
-var playOrPauseAudio = function(cover) {
-  var audio = cover.parent('.audio-container').find('audio');
-  var id = audio.attr('id');
-
-  if (audio.prop('paused'))
-    playAudio(id);
-  else
-    pauseAudio(id);
-}
-
 var stopAllAudio = function(excludedID) {
   $('.audio').each(function() {
     var currentID = this.getAttribute('id');
     if (currentID != excludedID && !this.paused)
       pauseAudio(currentID);
   })
+}
+
+var playOrPauseAudio = function(cover) {
+  var audio = cover.parent('.audio-container').find('audio');
+  var id = audio.attr('id');
+
+  if (audio.prop('paused')) {
+    stopAllAudio(id);
+    playAudio(id);
+  }
+  else
+    pauseAudio(id);
 }
 
 var updateElapsedTime = function() {
@@ -115,6 +117,14 @@ var triggerCanvas = function() {
   },50);
 }
 
+var triggered = {
+  1: false,
+  11: false,
+  17: false,
+  18: false,
+  25: false,
+};
+
 $(document).ready(function() {
   var container = document.getElementById('container');
   var pages = document.querySelectorAll('.page');
@@ -123,7 +133,7 @@ $(document).ready(function() {
       return;
 
     var id = null;
-    if (this.page == 3) {
+    if (this.page == 1) {
       id = 'audio-1';
     } else if (this.page == 11) {
       id = 'audio-2';
@@ -135,7 +145,8 @@ $(document).ready(function() {
       id = 'audio-5';
     }
 
-    if (id != null) {
+    if (id != null && !triggered[this.page]) {
+      triggered[this.page] = true;
       stopAllAudio(id);
       playAudio(id);
     }
