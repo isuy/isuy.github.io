@@ -126,7 +126,7 @@ var triggered = {
 };
 
 $(window).load(function() {
-  $('#body').css('opacity', 1);
+  $('html').first().css('opacity', 1);
 
   var container = document.getElementById('container');
   var pages = document.querySelectorAll('.page');
