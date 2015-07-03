@@ -125,7 +125,9 @@ var triggered = {
   25: false,
 };
 
-$(document).ready(function() {
+$(window).load(function() {
+  $('#body').css('opacity', 1);
+
   var container = document.getElementById('container');
   var pages = document.querySelectorAll('.page');
   var slip = Slip(container, 'y').webapp(pages).end(function() {
