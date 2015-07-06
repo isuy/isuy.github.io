@@ -35,7 +35,9 @@ html {
 }
 
 .content {
-  width: 70%;
+  width: 70vw;
+  display:table;
+  overflow:auto;
 }
 
 #canvas-content {
@@ -62,6 +64,7 @@ html {
 
 .answer p {
   margin: 0px 0px 2vh 0px;
+  word-wrap: word-break;
 }
 
 .answer ol p {
